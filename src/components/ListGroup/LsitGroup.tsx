@@ -1,5 +1,6 @@
 import { MouseEvent, useState } from "react";
-import style from './ListGroup.module.css';
+import { BsCalendar2Fill } from "react-icons/bs";
+
 
 interface Props {
   items: string[];
@@ -15,9 +16,9 @@ function ListGroup({ items, heading, onSelectItem }: Props) {
 
   return (
     <>
-      <h1>{heading}</h1>
+      <h1>{heading} <BsCalendar2Fill color="red" size={40} /></h1>
       {items.length === 0 && <p>no items found'</p>}
-      <ul className={[style.listGroup, style.container].join(' ')}>
+      <ul className="list-group">
         {items.map((item, index) => (
           <li
             key={item}

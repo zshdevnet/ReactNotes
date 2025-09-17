@@ -1,4 +1,6 @@
 import React from "react";
+import styles from './Button.module.css';
+import { FcLike } from "react-icons/fc";
 
 interface Props {
   children: string;
@@ -8,8 +10,8 @@ interface Props {
 
 const Button = ({ children, onClick, color = "primary" }: Props) => {
   return (
-    <button className={"btn btn-" + color} onClick={onClick} color="">
-      {children}
+    <button className={[styles.btn, styles['btn-'+color]].join(' ')} onClick={onClick} color="">
+      <FcLike />
     </button>
   );
 };
