@@ -1,13 +1,9 @@
-
-// PascalCasing
-function Message(){
-    // JavaScript XML
-    const myname = "Shohruz";
-    if (myname){
-        return <h1>Hello {myname}!</h1>;
-    } else{
-        return <h1>Hello World!</h1>
-    }
+function App(){
+    return(
+        <div>
+            <h1>Hello</h1>
+        </div>
+    );
 }
 
-export default Message;
+export default App;
